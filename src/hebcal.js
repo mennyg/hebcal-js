@@ -627,7 +627,11 @@ HDateProto.omer = function() {
 };
 
 HDateProto.dafyomi = function(o) {
-	return dafyomi.dafname(dafyomi.dafyomi(this.greg()), o);
+	if (option === "n") {
+		return dafyomi.dafnumber(dafyomi.dafyomi(this.greg()), o)
+	} else {
+		return dafyomi.dafname(dafyomi.dafyomi(this.greg()), o);
+	}
 };
 
 HDateProto.tachanun = (function() {
