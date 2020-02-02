@@ -139,6 +139,10 @@ exports.dafyomi = function(gregdate) {
 	return {name: shas[count].name, blatt: blatt};
 };
 
+exports.dafnumber = function(daf, o) {
+	(o === 'h' ? gematriya(daf.blatt) : daf.blatt);
+};
+
 exports.dafname = function(daf, o) {
 	return c.LANG(daf.name, o) + ' ' + (o === 'h' ? gematriya(daf.blatt) : daf.blatt);
 };
